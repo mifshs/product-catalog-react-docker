@@ -1,0 +1,5 @@
+# Не копируем локальные артефакты в образ фронтенда.
+node_modules
+dist
+.env
+npm-debug.log

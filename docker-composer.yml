@@ -1,0 +1,56 @@
+# docker-compose.yml — запуск всех сервисов вместе.
+#
+# Сервисы:
+# db  — PostgreSQL
+# api — Express backend
+# web — React frontend + Nginx
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: catalog-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-catalog_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-catalog_password}
+      POSTGRES_DB: ${POSTGRES_DB:-catalog_db}
+    volumes:
+      # Постоянные данные PostgreSQL.
+      - db_data:/var/lib/postgresql/data
+
+      # Скрипт инициализации выполняется только при первом создании volume.
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-catalog_user} -d ${POSTGRES_DB:-catalog_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ./backend
+    container_name: catalog-api
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgres://${POSTGRES_USER:-catalog_user}:${POSTGRES_PASSWORD:-catalog_password}@db:5432/${POSTGRES_DB:-catalog_db}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "4000:4000"
+
+  web:
+    build: ./frontend
+    container_name: catalog-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      # Сайт будет доступен на порту 3000 внутри Cloud Shell.
+      - "3000:80"
+
+volumes:
+  db_data:
