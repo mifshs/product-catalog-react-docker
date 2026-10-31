@@ -36,7 +36,7 @@ VALUES
     1,
     'Ноутбук UltraBook 14',
     'Легкий ноутбук для работы и учебы. 16 ГБ ОЗУ, SSD 512 ГБ, экран 14 дюймов.',
-    'https://picsum.photos/seed/laptop1/400/300',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2M5r4Cp8qPuujcvaEWwpecvnphBFRGWe6KvHamiYU4g&s',
     89990.00,
     'laptops',
     NOW() - INTERVAL '3 days'
@@ -45,7 +45,7 @@ VALUES
     2,
     'Игровой ноутбук PowerGame 16',
     'Мощный ноутбук для игр и монтажа видео. RTX-графика, 32 ГБ ОЗУ.',
-    'https://picsum.photos/seed/laptop2/400/300',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2M5r4Cp8qPuujcvaEWwpecvnphBFRGWe6KvHamiYU4g&s',
     145000.00,
     'laptops',
     NOW() - INTERVAL '2 days'
@@ -54,7 +54,7 @@ VALUES
     3,
     'Смартфон Nova X',
     'Смартфон с хорошей камерой, AMOLED-экраном и быстрой зарядкой.',
-    'https://picsum.photos/seed/phone1/400/300',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTatFwUjZb7Tj7kxxTFREKbEpfLaWdERImhnaP5D9VagA&s=10',
     54990.00,
     'phones',
     NOW() - INTERVAL '1 day'
@@ -63,7 +63,7 @@ VALUES
     4,
     'Беспроводные наушники AirSound',
     'Наушники с активным шумоподавлением и автономностью до 30 часов.',
-    'https://picsum.photos/seed/headphones1/400/300',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpxGsfCz3itjKvwDD3q9kLgEho5miJ8hoA0e_I6Hpus5MQt5LwHZCy6vk&s=10',
     12990.00,
     'accessories',
     NOW() - INTERVAL '12 hours'
@@ -72,7 +72,7 @@ VALUES
     5,
     'Механическая клавиатура TypePro',
     'Компактная клавиатура с горячей заменой переключателей и RGB-подсветкой.',
-    'https://picsum.photos/seed/keyboard1/400/300',
+    'https://i-store.net/_sh/59/5948.jpg',
     8990.00,
     'accessories',
     NOW() - INTERVAL '6 hours'
@@ -81,7 +81,7 @@ VALUES
     6,
     'Монитор ProView 27',
     '27-дюймовый монитор, IPS, 144 Гц, идеально для работы и игр.',
-    'https://picsum.photos/seed/monitor1/400/300',
+    'https://i2hard.ru/upload/resize_cache/iblock/48c/767_542_2/yx4hb64ypk4xxz723avbu43hqj9f0btb.JPG',
     34990.00,
     'monitors',
     NOW() - INTERVAL '2 hours'
