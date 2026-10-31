@@ -4,7 +4,7 @@
 export default function ProductCard({ product, onDelete }) {
   // Запасная картинка, если image_url пустой или не загрузился.
   const fallbackImage =
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='20'%3ENo photo%3C/text%3E%3C/svg%3E";
+    "data:image/svg+xml,%3Csvg xmlns='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI0HAbrkZVnhnxTv2DUXeEhWiYoJt-vTfDEKD06dZ3q9y4-Y9OAvn3Hw2g&s=10' width='400' height='300'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='20'%3ENo photo%3C/text%3E%3C/svg%3E";
 
   const priceFormatter = new Intl.NumberFormat('ru-RU', {
     style: 'currency',

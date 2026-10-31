@@ -145,7 +145,7 @@ router.post('/', async (req, res, next) => {
 
     // Если изображение не передано, используем placeholder.
     const finalImageUrl =
-      imageUrl || `https://picsum.photos/seed/${encodeURIComponent(name)}/400/300`;
+      imageUrl || `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI0HAbrkZVnhnxTv2DUXeEhWiYoJt-vTfDEKD06dZ3q9y4-Y9OAvn3Hw2g&s=10`;
 
     const result = await query(
       `
